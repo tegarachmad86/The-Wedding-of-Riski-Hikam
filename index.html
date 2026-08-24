@@ -1657,6 +1657,110 @@
     }
 
   </style>
+
+
+
+
+<style id="cover-final-v3">
+/* COVER V3: gambar besar memenuhi lebar cover, teks tetap kiri dan lebih turun */
+#section-cover .cover-bg-slot{
+  position:absolute !important;
+  inset:0 !important;
+  overflow:hidden !important;
+  display:block !important;
+  background:#eef1ee !important;
+}
+
+#section-cover .cover-bg-slot img{
+  position:absolute !important;
+  left:0 !important;
+  right:0 !important;
+  bottom:0 !important;
+  width:100% !important;
+  height:auto !important;
+  max-width:none !important;
+  max-height:none !important;
+  object-fit:contain !important;
+  object-position:center bottom !important;
+}
+
+#section-cover .cover-content{
+  position:absolute !important;
+  left:0 !important;
+  bottom:0 !important;
+  z-index:5 !important;
+  width:72% !important;
+  box-sizing:border-box !important;
+  padding:0 8px 48px 22px !important;
+  text-align:left !important;
+}
+
+#section-cover .eyebrow,
+#section-cover h1.couple-names,
+#section-cover .dear-line,
+#section-cover .guest-name{
+  text-align:left !important;
+}
+
+#section-cover .eyebrow{
+  margin-bottom:3px !important;
+}
+
+#section-cover h1.couple-names{
+  margin-bottom:5px !important;
+}
+
+#section-cover .guest-name{
+  margin-bottom:12px !important;
+}
+
+#section-cover .btn-open{
+  margin-left:0 !important;
+  margin-right:auto !important;
+}
+
+@media (max-width:600px){
+  #section-cover .cover-bg-slot img{
+    width:100% !important;
+    height:auto !important;
+    bottom:0 !important;
+  }
+
+  #section-cover .cover-content{
+    width:74% !important;
+    padding-left:22px !important;
+    padding-right:4px !important;
+    padding-bottom:48px !important;
+  }
+
+  #section-cover h1.couple-names{
+    font-size:clamp(2rem,9vw,2.35rem) !important;
+    line-height:1 !important;
+  }
+
+  #section-cover h1.couple-names .amp{
+    margin:0 !important;
+  }
+
+  #section-cover .btn-open{
+    padding:10px 18px !important;
+    font-size:.74rem !important;
+  }
+}
+
+@media (max-width:380px){
+  #section-cover .cover-content{
+    width:76% !important;
+    padding-left:20px !important;
+    padding-bottom:44px !important;
+  }
+
+  #section-cover h1.couple-names{
+    font-size:1.9rem !important;
+  }
+}
+</style>
+
 </head>
 
 <body class="lock-scroll">
