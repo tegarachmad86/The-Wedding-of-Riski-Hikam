@@ -713,138 +713,197 @@
     }
 
     /* ===================== SECTION 5: WEDDING EVENT ===================== */
-    #section-event {
-      background: var(--slate);
-      padding: 50px 22px 46px;
-    }
+  #section-event {
+  background: var(--slate);
+  padding: 50px 22px 46px;
+  }
 
-    #section-event .event-title {
-      text-align: center;
-      color: #fff;
-      margin-bottom: 34px;
-    }
+  #section-event .event-title {
+  text-align: center;
+  color: #fff;
+  margin-bottom: 34px;
+  }
 
-    #section-event .event-title .script {
-      font-size: 2.4rem;
-      display: block;
-      line-height: 1;
-    }
+  #section-event .event-title .script {
+  font-size: 2.4rem;
+  display: block;
+  line-height: 1;
+  }
 
-    #section-event .event-title .sub {
-      font-size: .85rem;
-      letter-spacing: .5em;
-      padding-left: .5em;
-      display: block;
-      margin-top: 4px;
-    }
+  #section-event .event-title .sub {
+  font-size: .85rem;
+  letter-spacing: .5em;
+  padding-left: .5em;
+  display: block;
+  margin-top: 4px;
+  }
 
-    .event-card {
-      background: var(--cream);
-      border-radius: 30px;
-      display: flex;
-      overflow: hidden;
-      box-shadow: var(--shadow);
-      margin-bottom: 22px;
-      position: relative;
-      min-height: 230px;
-    }
 
-    .event-card:last-child {
-      margin-bottom: 0;
-    }
+  /* =========================
+   EVENT CARD
+  ========================= */
 
-    .event-card .ec-label {
-      background: var(--slate-darker);
-      color: #fff;
-      writing-mode: vertical-rl;
-      text-orientation: mixed;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.15rem;
-      letter-spacing: .05em;
-      padding: 14px 10px;
-      flex-shrink: 0;
-    }
+  .event-card {
+  background: var(--cream);
+  border-radius: 30px;
+  display: flex;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  margin-bottom: 22px;
+  position: relative;
+  min-height: 230px;
+  }
 
-    .event-card.side-right {
-      flex-direction: row-reverse;
-    }
+  .event-card:last-child {
+  margin-bottom: 0;
+  }
 
-    .event-card.side-right .ec-label {
-      transform: rotate(180deg);
-    }
 
-    .event-card .ec-body {
-      padding: 22px 20px;
-      flex: 1;
-    }
+  /* =========================
+   LABEL SAMPING
+  ========================= */
 
-    .event-card .ec-date-row {
-      display: flex;
-      align-items: baseline;
-      gap: 12px;
-      margin-bottom: 10px;
-    }
+  .event-card .ec-label {
+  background: var(--slate-darker);
+  color: #fff;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
 
-    .event-card .ec-date-num {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.6rem;
-      color: var(--slate-mid);
-      line-height: 1;
-    }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    .event-card .ec-date-text {
-      font-size: .85rem;
-      line-height: 1.3;
-    }
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  letter-spacing: .05em;
 
-    .event-card .ec-date-text b {
-      display: block;
-    }
+  padding: 14px 10px;
+  flex-shrink: 0;
+  }
 
-    .event-card hr {
-      border: none;
-      border-top: 1px solid #d8dcd9;
-      margin-bottom: 12px;
-    }
 
-    .event-card .ec-time {
-      font-size: .85rem;
-      margin-bottom: 12px;
-    }
+  /* Kartu kedua label di kanan */
 
-    .event-card .ec-loc-label {
-      color: var(--slate-mid);
-      font-weight: 500;
-      font-size: .92rem;
-      margin-bottom: 6px;
-    }
+  .event-card.side-right {
+  flex-direction: row-reverse;
+  }
+  
+  .event-card.side-right .ec-label {
+  transform: rotate(180deg);
+  }
 
-    .event-card .ec-place {
-      font-size: .82rem;
-      line-height: 1.5;
-      margin-bottom: 16px;
-    }
 
-    .event-card .btn-loc {
-      background: var(--slate-mid);
-      color: #fff;
-      border: none;
-      padding: 9px 18px;
-      border-radius: 24px;
-      font-size: .78rem;
-      display: inline-flex;
-      align-items: center;
-      gap: 6px;
-      cursor: pointer;
-    }
+  /* =========================
+   ISI KARTU
+  ========================= */
 
-    .event-card .btn-loc svg {
-      width: 13px;
-      height: 13px;
-    }
+  .event-card .ec-body {
+  padding: 22px 20px;
+  flex: 1;
+  min-width: 0;
+  }
+
+
+  /* =========================
+   TANGGAL
+  ========================= */
+
+  .event-card .ec-date-row {
+  display: grid;
+
+  /* Kolom angka tanggal + kolom teks */
+  grid-template-columns: 55px minmax(0, 1fr);
+
+  align-items: start;
+  column-gap: 10px;
+
+  margin-bottom: 10px;
+  }
+
+  .event-card .ec-date-num {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 2.6rem;
+  color: var(--slate-mid);
+  line-height: 1;
+  }
+
+  .event-card .ec-date-text {
+  font-size: .85rem;
+  line-height: 1.3;
+  padding-top: 2px;
+  }
+
+  .event-card .ec-date-text b {
+  display: block;
+  }
+
+
+  /* =========================
+   GARIS
+  ========================= */
+
+  .event-card hr {
+  border: none;
+  border-top: 1px solid #d8dcd9;
+  margin: 0 0 12px;
+  }
+
+
+  /* =========================
+   WAKTU
+  ========================= */
+
+  .event-card .ec-time {
+  font-size: .85rem;
+  line-height: 1.4;
+  margin-bottom: 12px;
+  }
+
+  
+  /* =========================
+   LOKASI
+  ========================= */
+
+  .event-card .ec-loc-label {
+  color: var(--slate-mid);
+  font-weight: 500;
+  font-size: .92rem;
+  margin-bottom: 6px;
+  }
+
+  .event-card .ec-place {
+  font-size: .82rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  }
+
+
+  /* =========================
+   TOMBOL LOKASI
+  ========================= */
+
+  .event-card .btn-loc {
+  background: var(--slate-mid);
+  color: #fff;
+
+  border: none;
+
+  padding: 9px 18px;
+  border-radius: 24px;
+
+  font-size: .78rem;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+
+  cursor: pointer;
+  }
+
+  .event-card .btn-loc svg {
+  width: 13px;
+  height: 13px;
+  }
 
     /* ===================== SECTION 5B: LIVE STREAMING ===================== */
     #section-live {
