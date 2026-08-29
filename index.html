@@ -2088,6 +2088,10 @@
 
       countHadir.textContent = hadir;
       countTidak.textContent = tidak;
+      
+      setTimeout(() => {
+        wishesList.scrollTop = wishesList.scrollHeight;
+      }, 100);
     }
 
     async function loadWishes() {
