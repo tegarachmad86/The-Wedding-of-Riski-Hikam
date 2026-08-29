@@ -1364,6 +1364,18 @@
       cursor: pointer;
       margin-bottom: 22px;
     }
+    #wishes-list {
+      max-height: 460px;
+      overflow-y: auto;
+      padding-right: 6px;
+    }
+    #wishes-list::-webkit-scrollbar {
+      width: 5px;
+    }
+    #wishes-list::-webkit-scrollbar-thumb {
+      background: rgba(94, 121, 134, .35);
+      border-radius: 10px;
+    }
 
     #wishes-list .wish-item {
       display: flex;
