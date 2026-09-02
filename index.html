@@ -2057,6 +2057,13 @@
       return div.innerHTML;
     }
 
+    function formatWishDate(raw) {
+      if (!raw) return '';
+      const d = new Date(raw);
+      if (isNaN(d.getTime())) return escapeHtml(raw); // fallback kalau formatnya aneh
+      const pad = n => String(n).padStart(2, '0');
+      return `${pad(d.getDate())}-${pad(d.getMonth() + 1)}-${d.getFullYear()} ${pad(d.getHours())}:${pad(d.getMinutes())}`;
+    }
     function renderWishes(rows) {
       wishesList.innerHTML = '';
       if (!rows || rows.length === 0) {
