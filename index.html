@@ -2080,7 +2080,7 @@
       </div>
       <div>
         <div class="wish-name">${escapeHtml(row.nama)} <span style="color:${isHadir ? '#2f6b3f' : '#a5333f'}; font-weight:600; font-size:.78rem;">${isHadir ? '✓ Hadir' : '✗ Tidak Hadir'}</span></div>
-        <div class="wish-date">${escapeHtml(row.waktu)}</div>
+        <div class="wish-date">${formatWishDate(row.waktu)}</div>
         <div class="wish-text">${escapeHtml(row.ucapan)}</div>
       </div>`;
         wishesList.appendChild(item);
